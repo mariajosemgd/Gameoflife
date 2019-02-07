@@ -102,7 +102,7 @@ public class GameOfLife {
 			
 			//prints out the evolved grid
 			System.out.println("this is the evolved grid:");
-			printGrid(evolvegrid(grid));
+			printGrid(grid);
 			
 			//asks user if they want to continue evolving
 			System.out.println("Do you wish to evolve again? type Y for yes or N for No");
@@ -255,7 +255,6 @@ public class GameOfLife {
 	public static int[][] evolvegrid(int[][] grid) {
 		//array to represent evolved grid
 		int[][] evolved= new int[grid.length][grid.length];
-		
 		//loops through each cell to decide its new value
 		for(int i=0; i<grid.length; i++) {
 			for (int j=0; j<grid.length;j++) {
@@ -303,8 +302,6 @@ public class GameOfLife {
 			//generates 2 random numbers
 			random1= (int)(Math.random() * gridsize );
 			random2= (int)(Math.random() * gridsize );
-			System.out.println(random1);
-			System.out.println(random2);
 			//populates a cell on a random location in the grid
 			grid[random1][random2]=1;
 		}
